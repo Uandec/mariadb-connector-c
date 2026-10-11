@@ -1,3 +1,0 @@
-{
-  _mysql_client_plugin_declaration_;
-};

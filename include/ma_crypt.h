@@ -122,21 +122,18 @@ static inline size_t ma_hash_digest_size(unsigned int hash_alg)
   @param[in] buffer_leng  length of buffer
   @param[out] digest      computed hash digest
 
-  @return                 0 on success, 1 on failure
+  @return                 void
 */
-static inline int ma_hash(unsigned int algorithm,
+static inline void ma_hash(unsigned int algorithm,
                            const unsigned char *buffer,
                            size_t buffer_length,
                            unsigned char *digest)
 {
-  MA_HASH_CTX *ctx;
+  MA_HASH_CTX *ctx= NULL;
   ctx= ma_hash_new(algorithm);
-  if (!ctx)
-    return 1;
   ma_hash_input(ctx, buffer, buffer_length);
   ma_hash_result(ctx, digest);
   ma_hash_free(ctx);
-  return 0;
 }
 
 #endif /* _ma_crypt_h_ */

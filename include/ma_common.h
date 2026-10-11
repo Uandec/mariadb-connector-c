@@ -90,7 +90,6 @@ struct st_mysql_options_extension {
   my_bool tls_allow_invalid_server_cert;
   int (*tls_verification_callback)(MARIADB_TLS *ctls, unsigned int flags);
   unsigned char zstd_compression_level;
-  unsigned int max_columns;
 };
 
 typedef struct st_connection_handler

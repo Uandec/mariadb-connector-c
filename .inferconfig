@@ -1,6 +1,0 @@
-{
-  "skip-analysis-in-path": [
-    ".*unittest.*",
-    ".*external.*"
-  ]
-}
